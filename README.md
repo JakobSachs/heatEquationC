@@ -3,6 +3,9 @@
 A quick project getting into gnuplot and such, making a simulation of the heat
 equation.
 
+![](https://github.com/JakobSachs/heatEquationC/blob/master/example.png?raw=true)
+
+
 Usage:
 
 ```

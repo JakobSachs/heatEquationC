@@ -1,0 +1,13 @@
+list = system('ls out')
+
+set terminal pngcairo
+set pm3d map
+
+i = 1
+cd 'out'
+do for [file in list] {
+    set output sprintf('../anim/%s.png', file)
+    set title sprintf("%s | %d fs", file, i)
+    splot file
+    i = i + 1
+}

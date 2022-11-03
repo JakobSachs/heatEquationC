@@ -1,6 +1,6 @@
 CC=gcc
-LDFLAGS=  -L${MKLROOT}/lib/intel64 -Wl,--no-as-needed -lmkl_intel_lp64 -lmkl_gnu_thread -lmkl_core -lgomp -lpthread -lm -ldl
-CFLAGS=  -m64 -I${MKLROOT}/include 
+LDFLAGS=
+CFLAGS=   
 OBJ = main.c
 
 %.o: %.c 

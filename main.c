@@ -18,8 +18,8 @@ int main()
   printf("N:\t%d\tT:\t%d\talpha:\t%.3f\n", N, T, alpha);
   printf("dx:\t%d\tdt:\t%.3f\tgamma:\t%.3f\n", d_x, d_t, gamma);
 
-  double* m1 = mkl_malloc((N + 1) * (N + 1) * sizeof(double), 64);
-  double* m2 = mkl_malloc((N + 1) * (N + 1) * sizeof(double), 64);
+  double* m1 = malloc((N + 1) * (N + 1) * sizeof(double) );
+  double* m2 = malloc((N + 1) * (N + 1) * sizeof(double) );
 
   // initalize
   for (int i = 0; i < (N + 1) * (N + 1); i++)
@@ -84,8 +84,8 @@ int main()
     }
   }
 
-  mkl_free(m1);
-  mkl_free(m2);
+  free(m1);
+  free(m2);
 
   printf("Done!\n");
   return 0;
